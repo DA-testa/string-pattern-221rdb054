@@ -3,13 +3,13 @@
 def read_input():
     text=input()
     if "I" in text[:1]:
-        txt_1=input()
-        txt_2=input()
+        txt_1=input().rstrip()
+        txt_2=input().rstrip()
     else:
         with open("./tests/06", "r") as f:
-            txt_1=f.readline()
-            txt_2=f.readline()
-    return(txt_1.rstrip(), txt_2.rstrip())
+            txt_1=f.readline().rstrip()
+            txt_2=f.readline().rstrip()
+    return(txt_1, txt_2)
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     
