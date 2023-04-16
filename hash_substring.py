@@ -1,10 +1,15 @@
 # python3
 
 def read_input():
-    inp_type=input().rstrip()
-    pattern=input().rstrip()
-    text=input().rstrip()
-    return(pattern, text)
+    text=input()
+    if "I" in text[:1]:
+        txt_1=input()
+        txt_2=input()
+    else:
+        with open("./tests/06", "r") as f:
+            txt_1=f.readline()
+            txt_2=f.readline()
+    return(txt_1.rstrip(), txt_2.rstrip())
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     
